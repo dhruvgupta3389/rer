@@ -1,0 +1,168 @@
+.unit-selector {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.unit-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.unit-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    min-width: 120px;
+}
+
+.unit-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.unit-tab:hover::before {
+    left: 100%;
+}
+
+.unit-icon {
+    font-size: 1.5rem;
+}
+
+.unit-short-name {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.unit-full-name {
+    display: none;
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+/* Unit 1: Introduction & Solar Cells - Orange/Yellow */
+.unit-tab.unit-1 {
+    background: linear-gradient(135deg, #FF9500, #FFD60A);
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(255, 149, 0, 0.3);
+}
+
+.unit-tab.unit-1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 149, 0, 0.4);
+}
+
+.unit-tab.unit-1.active {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 149, 0, 0.5);
+}
+
+/* Unit 2: Solar Thermal Energy - Red/Orange */
+.unit-tab.unit-2 {
+    background: linear-gradient(135deg, #FF5733, #FFC300);
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(255, 87, 51, 0.3);
+}
+
+.unit-tab.unit-2:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 87, 51, 0.4);
+}
+
+.unit-tab.unit-2.active {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 87, 51, 0.5);
+}
+
+/* Unit 3: Geothermal, MHD & Fuel Cells - Blue */
+.unit-tab.unit-3 {
+    background: linear-gradient(135deg, #2980B9, #1ABC9C);
+    color: white;
+    box-shadow: 0 4px 15px rgba(41, 128, 185, 0.3);
+}
+
+.unit-tab.unit-3:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(41, 128, 185, 0.4);
+}
+
+.unit-tab.unit-3.active {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(41, 128, 185, 0.5);
+}
+
+/* Unit 4: Thermoelectric & Wind Energy - Green */
+.unit-tab.unit-4 {
+    background: linear-gradient(135deg, #27AE60, #2ECC71);
+    color: white;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.unit-tab.unit-4:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+}
+
+.unit-tab.unit-4.active {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(39, 174, 96, 0.5);
+}
+
+/* Unit 5: Biomass, OTEC & Tidal - Cyan/Teal */
+.unit-tab.unit-5 {
+    background: linear-gradient(135deg, #00CED1, #20B2AA);
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(0, 206, 209, 0.3);
+}
+
+.unit-tab.unit-5:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 206, 209, 0.4);
+}
+
+.unit-tab.unit-5.active {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 206, 209, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .unit-tabs {
+        gap: 8px;
+    }
+
+    .unit-tab {
+        min-width: 60px;
+        padding: 10px 12px;
+    }
+
+    .unit-short-name {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .unit-tab {
+        min-width: 160px;
+    }
+
+    .unit-full-name {
+        display: block;
+    }
+}

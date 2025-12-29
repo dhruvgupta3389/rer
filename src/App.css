@@ -1,0 +1,150 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ======================== */
+/* HEADER */
+/* ======================== */
+.app-header {
+  margin-bottom: 10px;
+}
+
+.app-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  text-shadow: 0 0 40px rgba(0, 210, 255, 0.3);
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  margin: 8px 0 0;
+  font-weight: 500;
+}
+
+/* ======================== */
+/* UNIT TITLE */
+/* ======================== */
+.unit-title {
+  margin: 10px 0;
+}
+
+.unit-title h2 {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ======================== */
+/* FOOTER */
+/* ======================== */
+.app-footer {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 700px;
+}
+
+.badge-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.high {
+  background: linear-gradient(135deg, #ff4757, #ff6b81);
+  box-shadow: 0 0 8px rgba(255, 71, 87, 0.5);
+}
+
+.dot.medium {
+  background: linear-gradient(135deg, #ffa502, #ffcc00);
+  box-shadow: 0 0 8px rgba(255, 165, 2, 0.5);
+}
+
+.dot.normal {
+  background: linear-gradient(135deg, #2ed573, #7bed9f);
+  box-shadow: 0 0 8px rgba(46, 213, 115, 0.5);
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 10px;
+}
+
+/* ======================== */
+/* RESPONSIVE */
+/* ======================== */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem 0.5rem;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .unit-title h2 {
+    font-size: 1.1rem;
+  }
+
+  .badge-legend {
+    gap: 12px;
+  }
+
+  .legend-item {
+    font-size: 0.75rem;
+  }
+}

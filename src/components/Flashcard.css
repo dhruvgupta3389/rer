@@ -1,0 +1,338 @@
+.flashcard {
+  background-color: transparent;
+  width: 700px;
+  height: 480px;
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 20px auto;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: 20px;
+}
+
+.flashcard.flipped .flashcard-inner {
+  transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 25px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* ======================== */
+/* FRONT FACE STYLES */
+/* ======================== */
+.flashcard-front {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  color: #1a1a1a;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.flashcard-front h2 {
+  font-size: 1.4rem;
+  margin: 15px 0 10px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.front-text {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+/* ======================== */
+/* BACK FACE STYLES - Unit Themes */
+/* ======================== */
+.flashcard-back {
+  transform: rotateY(180deg);
+  color: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Unit 1: Solar Cells - Orange/Yellow */
+.unit-theme-1 .flashcard-back {
+  background: linear-gradient(145deg, #FF9500, #FFD60A);
+  color: #1a1a1a;
+}
+
+.unit-theme-1 .flashcard-back h2,
+.unit-theme-1 .flashcard-back li {
+  color: #1a1a1a;
+}
+
+/* Unit 2: Solar Thermal - Red/Orange */
+.unit-theme-2 .flashcard-back {
+  background: linear-gradient(145deg, #FF5733, #FFC300);
+  color: #1a1a1a;
+}
+
+.unit-theme-2 .flashcard-back h2,
+.unit-theme-2 .flashcard-back li {
+  color: #1a1a1a;
+}
+
+/* Unit 3: Geothermal/MHD - Blue */
+.unit-theme-3 .flashcard-back {
+  background: linear-gradient(145deg, #2980B9, #1ABC9C);
+}
+
+/* Unit 4: Wind/Thermoelectric - Green */
+.unit-theme-4 .flashcard-back {
+  background: linear-gradient(145deg, #27AE60, #2ECC71);
+}
+
+/* Unit 5: Biomass/Ocean - Cyan */
+.unit-theme-5 .flashcard-back {
+  background: linear-gradient(145deg, #00CED1, #20B2AA);
+  color: #1a1a1a;
+}
+
+.unit-theme-5 .flashcard-back h2,
+.unit-theme-5 .flashcard-back li {
+  color: #1a1a1a;
+}
+
+/* ======================== */
+/* IMPORTANCE BADGES */
+/* ======================== */
+.importance-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: pulse 2s infinite;
+}
+
+.badge-high {
+  background: linear-gradient(135deg, #ff4757, #ff6b81);
+  color: white;
+  box-shadow: 0 3px 12px rgba(255, 71, 87, 0.4);
+}
+
+.badge-medium {
+  background: linear-gradient(135deg, #ffa502, #ffcc00);
+  color: #1a1a1a;
+  box-shadow: 0 3px 12px rgba(255, 165, 2, 0.4);
+}
+
+.badge-normal {
+  background: linear-gradient(135deg, #2ed573, #7bed9f);
+  color: #1a1a1a;
+  box-shadow: 0 3px 12px rgba(46, 213, 115, 0.4);
+}
+
+.badge-emoji {
+  font-size: 0.9rem;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.85;
+  }
+}
+
+/* ======================== */
+/* CONTENT STYLES */
+/* ======================== */
+.infographic {
+  max-width: 95%;
+  max-height: 280px;
+  object-fit: contain;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.back-content {
+  width: 100%;
+  text-align: left;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.back-content h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+ul {
+  text-align: left;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-left: 24px;
+  position: relative;
+}
+
+li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  opacity: 0.7;
+}
+
+/* ======================== */
+/* RESPONSIVE - TABLET */
+/* ======================== */
+@media (max-width: 768px) {
+  .flashcard {
+    width: 95vw;
+    max-width: 450px;
+    height: auto;
+    min-height: 400px;
+  }
+
+  .flashcard-inner {
+    min-height: 400px;
+  }
+
+  .flashcard-front,
+  .flashcard-back {
+    position: relative;
+    min-height: 400px;
+    height: auto;
+    padding: 20px 15px;
+  }
+
+  .flashcard-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .flashcard-front h2,
+  .flashcard-back h2 {
+    font-size: 1.15rem;
+  }
+
+  li {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+
+  .infographic {
+    max-height: 180px;
+  }
+
+  .importance-badge {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* ======================== */
+/* RESPONSIVE - MOBILE */
+/* ======================== */
+@media (max-width: 480px) {
+  .flashcard {
+    width: 100vw;
+    max-width: 100%;
+    margin: 10px 0;
+    border-radius: 0;
+  }
+
+  .flashcard-inner {
+    border-radius: 0;
+  }
+
+  .flashcard-front,
+  .flashcard-back {
+    border-radius: 0;
+    padding: 18px 12px;
+    min-height: 380px;
+  }
+
+  .flashcard-front h2 {
+    font-size: 1.1rem;
+    margin-top: 35px;
+  }
+
+  .flashcard-back h2 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .front-text {
+    font-size: 0.95rem;
+  }
+
+  li {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    padding-left: 18px;
+  }
+
+  .infographic {
+    max-height: 150px;
+    max-width: 100%;
+  }
+
+  .hint {
+    font-size: 0.75rem;
+  }
+
+  .importance-badge {
+    font-size: 0.6rem;
+    padding: 3px 6px;
+    top: 8px;
+    right: 8px;
+  }
+
+  .badge-label {
+    display: none;
+  }
+}
