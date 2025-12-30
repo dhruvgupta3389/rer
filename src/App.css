@@ -54,6 +54,52 @@ body {
 }
 
 /* ======================== */
+/* COURSE SWITCH BUTTON */
+/* ======================== */
+.course-switch-btn {
+  margin-top: 12px;
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.course-switch-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.course-switch-btn:active {
+  transform: translateY(0);
+}
+
+/* ======================== */
+/* DEEP LEARNING THEME */
+/* ======================== */
+.deep-learning-theme .app-header h1 {
+  background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 40px rgba(102, 126, 234, 0.3);
+}
+
+.deep-learning-theme .course-switch-btn {
+  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+  box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+}
+
+.deep-learning-theme .course-switch-btn:hover {
+  box-shadow: 0 6px 20px rgba(0, 210, 255, 0.6);
+}
+
+/* ======================== */
 /* UNIT TITLE */
 /* ======================== */
 .unit-title {
@@ -120,8 +166,105 @@ body {
   margin-top: 10px;
 }
 
+
 /* ======================== */
-/* RESPONSIVE */
+/* MENU SCREEN */
+/* ======================== */
+.menu-screen {
+  justify-content: center;
+}
+
+.course-menu {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.course-card .icon {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.course-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.course-card p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Card Specific Themes (On Hover or Active) */
+.course-card.energy:hover {
+  box-shadow: 0 10px 30px rgba(0, 210, 255, 0.3);
+  border-color: #00d2ff;
+}
+
+.course-card.ml:hover {
+  box-shadow: 0 10px 30px rgba(118, 75, 162, 0.4);
+  border-color: #f093fb;
+}
+
+.course-card.dbms:hover {
+  box-shadow: 0 10px 30px rgba(46, 213, 115, 0.4);
+  border-color: #2ed573;
+}
+
+
+/* ======================== */
+/* DBMS THEME */
+/* ======================== */
+.dbms-theme .app-header h1 {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 40px rgba(56, 239, 125, 0.3);
+}
+
+.dbms-theme .course-switch-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  box-shadow: none;
+}
+
+.dbms-theme .course-switch-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ======================== */
+/* RESPONSIVE - TABLET */
 /* ======================== */
 @media (max-width: 768px) {
   #root {
@@ -146,5 +289,66 @@ body {
 
   .legend-item {
     font-size: 0.75rem;
+  }
+}
+
+/* ======================== */
+/* RESPONSIVE - MOBILE */
+/* ======================== */
+@media (max-width: 480px) {
+  #root {
+    padding: 0.75rem 0;
+    padding-bottom: 90px;
+    /* Space for fixed bottom nav */
+  }
+
+  .App {
+    gap: 10px;
+  }
+
+  .course-menu {
+    gap: 15px;
+  }
+
+  .course-card {
+    width: 140px;
+    height: 140px;
+    padding: 15px;
+  }
+
+  .course-card .icon {
+    font-size: 2.5rem;
+  }
+
+  .course-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .app-header {
+    margin-bottom: 5px;
+    padding: 0 10px;
+  }
+
+  .app-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+    margin-top: 4px;
+  }
+
+  .unit-title {
+    margin: 5px 0;
+    padding: 0 10px;
+  }
+
+  .unit-title h2 {
+    font-size: 0.95rem;
+  }
+
+  .app-footer {
+    display: none;
+    /* Hide footer on mobile to save space */
   }
 }
