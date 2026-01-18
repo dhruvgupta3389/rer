@@ -4,6 +4,7 @@ import FlashcardDeck from './components/FlashcardDeck'
 import UnitSelector from './components/UnitSelector'
 import DeepLearningApp from './DeepLearningApp'
 import DBMSApp from './DBMSApp'
+import DWMApp from './DWMApp'
 import { unit1Data } from './data/unit1Data'
 import { unit2Data } from './data/unit2Data'
 import { unit3Data } from './data/unit3Data'
@@ -20,7 +21,7 @@ const unitNames = [
 
 const allUnitsData = [unit1Data, unit2Data, unit3Data, unit4Data, unit5Data]
 
-type Course = 'energy' | 'deeplearning' | 'dbms' | 'menu';
+type Course = 'energy' | 'deeplearning' | 'dbms' | 'dwm' | 'menu';
 
 function App() {
   const [currentCourse, setCurrentCourse] = useState<Course>('menu')
@@ -35,6 +36,11 @@ function App() {
   // Show DBMS course
   if (currentCourse === 'dbms') {
     return <DBMSApp onSwitchCourse={() => setCurrentCourse('menu')} />
+  }
+
+  // Show DWM course
+  if (currentCourse === 'dwm') {
+    return <DWMApp onSwitchCourse={() => setCurrentCourse('menu')} />
   }
 
   // Show Main Menu if course is 'menu'
@@ -62,6 +68,12 @@ function App() {
             <span className="icon">💾</span>
             <h3>DBMS</h3>
             <p>Database Management</p>
+          </button>
+
+          <button className="course-card dwm" onClick={() => setCurrentCourse('dwm')}>
+            <span className="icon">📊</span>
+            <h3>DWM</h3>
+            <p>Data Warehousing & Mining</p>
           </button>
         </div>
         <footer className="app-footer">

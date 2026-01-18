@@ -238,6 +238,11 @@ body {
   border-color: #2ed573;
 }
 
+.course-card.dwm:hover {
+  box-shadow: 0 10px 30px rgba(255, 159, 67, 0.4);
+  border-color: #ff9f43;
+}
+
 
 /* ======================== */
 /* DBMS THEME */
@@ -258,6 +263,30 @@ body {
 }
 
 .dbms-theme .course-switch-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ======================== */
+/* DWM THEME */
+/* ======================== */
+.dwm-theme .app-header h1 {
+  background: linear-gradient(135deg, #f093fb, #f5576c, #ff9f43);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 40px rgba(255, 159, 67, 0.3);
+}
+
+.dwm-theme .course-switch-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  box-shadow: none;
+}
+
+.dwm-theme .course-switch-btn:hover {
   background: rgba(255, 255, 255, 0.2);
   color: white;
   transform: translateY(-2px);
