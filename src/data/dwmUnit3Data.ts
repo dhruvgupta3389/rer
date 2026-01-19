@@ -5,6 +5,7 @@ export const dwmUnit3Data: FlashcardData[] = [
         id: 1,
         title: "1. Data Mining - Overview",
         frontText: "What is Data Mining?",
+        frontImage: "/dwm/kdd_process.png",
         backTitle: "DM Definition",
         importance: "high",
         backContent: [
@@ -74,6 +75,7 @@ export const dwmUnit3Data: FlashcardData[] = [
         id: 5,
         title: "5. Data Cleaning - Noisy Data",
         frontText: "Handling errors & outliers",
+        frontImage: "/dwm/binning_techniques.png",
         backTitle: "Noise Smoothing Techniques",
         importance: "high",
         backContent: [
@@ -138,6 +140,7 @@ export const dwmUnit3Data: FlashcardData[] = [
         id: 9,
         title: "9. Decision Tree Introduction",
         frontText: "Tree-based classification",
+        frontImage: "/dwm/decision_tree.png",
         backTitle: "Decision Tree Basics",
         importance: "high",
         backContent: [

@@ -22,6 +22,7 @@ export const dwmUnit5Data: FlashcardData[] = [
         id: 2,
         title: "2. OLAP Functions & Tools",
         frontText: "Analytical operations",
+        frontImage: "/dwm/olap_cube_operations.png",
         backTitle: "OLAP Operations",
         importance: "high",
         backContent: [
@@ -38,6 +39,7 @@ export const dwmUnit5Data: FlashcardData[] = [
         id: 3,
         title: "3. OLAP Servers - ROLAP",
         frontText: "Relational OLAP",
+        frontImage: "/dwm/rolap_molap_holap.png",
         backTitle: "ROLAP Details",
         importance: "high",
         backContent: [
@@ -141,6 +143,7 @@ export const dwmUnit5Data: FlashcardData[] = [
         id: 9,
         title: "9. Recent Trends - Web & Spatial Mining",
         frontText: "Modern mining techniques",
+        frontImage: "/dwm/web_mining_types.png",
         backTitle: "Mining Trends",
         importance: "high",
         backContent: [

@@ -65,6 +65,7 @@ export const dwmUnit2Data: FlashcardData[] = [
         id: 5,
         title: "5. Client/Server Computing Model",
         frontText: "Distributed DW access",
+        frontImage: "/dwm/client_server_model.png",
         backTitle: "Client/Server Architecture",
         importance: "high",
         backContent: [
@@ -80,6 +81,7 @@ export const dwmUnit2Data: FlashcardData[] = [
         id: 6,
         title: "6. Parallel Processors & Clusters",
         frontText: "High-performance computing",
+        frontImage: "/dwm/smp_mpp_comparison.png",
         backTitle: "Parallel Systems",
         importance: "high",
         backContent: [

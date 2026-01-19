@@ -21,6 +21,7 @@ export const dwmUnit1Data: FlashcardData[] = [
         id: 2,
         title: "2. Data Warehouse Components",
         frontText: "Building blocks of a DW",
+        frontImage: "/dwm/dw_architecture.png",
         backTitle: "DW Architecture",
         importance: "high",
         backContent: [
@@ -117,6 +118,7 @@ export const dwmUnit1Data: FlashcardData[] = [
         id: 8,
         title: "8. Data Cubes & OLAP Operations",
         frontText: "Multidimensional analysis",
+        frontImage: "/dwm/olap_operations.png",
         backTitle: "Cube Operations",
         importance: "high",
         backContent: [
@@ -133,6 +135,7 @@ export const dwmUnit1Data: FlashcardData[] = [
         id: 9,
         title: "9. Schema Types",
         frontText: "Star, Snowflake, Fact Constellation",
+        frontImage: "/dwm/star_schema.png",
         backTitle: "Schema Comparison",
         importance: "high",
         backContent: [

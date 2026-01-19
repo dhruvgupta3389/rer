@@ -54,6 +54,7 @@ export const dwmUnit4Data: FlashcardData[] = [
         id: 4,
         title: "4. Clustering - Introduction",
         frontText: "Grouping similar objects",
+        frontImage: "/dwm/kmeans_clustering.png",
         backTitle: "Clustering Basics",
         importance: "high",
         backContent: [
@@ -86,6 +87,7 @@ export const dwmUnit4Data: FlashcardData[] = [
         id: 6,
         title: "6. Hierarchical Clustering",
         frontText: "Building cluster hierarchy",
+        frontImage: "/dwm/hierarchical_clustering.png",
         backTitle: "CURE & Chameleon",
         importance: "high",
         backContent: [
@@ -105,6 +107,7 @@ export const dwmUnit4Data: FlashcardData[] = [
         id: 7,
         title: "7. Density-Based Clustering",
         frontText: "DBSCAN & OPTICS",
+        frontImage: "/dwm/dbscan_clustering.png",
         backTitle: "Density Methods",
         importance: "high",
         backContent: [
@@ -153,6 +156,7 @@ export const dwmUnit4Data: FlashcardData[] = [
         id: 10,
         title: "10. Apriori Algorithm",
         frontText: "Mining frequent itemsets",
+        frontImage: "/dwm/apriori_algorithm.png",
         backTitle: "Apriori Steps",
         importance: "high",
         backContent: [
